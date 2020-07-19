@@ -1,0 +1,15 @@
+{
+    "name": "clicker.mrcyjanek",
+    "description": "Simple clicker app",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Clicker",
+    "hooks": {
+        "clicker": {
+            "apparmor": "clicker.apparmor",
+            "desktop":  "clicker.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Czarek Nakamoto <mrcyjanek@gmail.com>",
+    "framework" : "ubuntu-sdk-16.04"
+}
