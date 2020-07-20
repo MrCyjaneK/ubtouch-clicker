@@ -19,6 +19,8 @@ import Ubuntu.Components 1.3
 //import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
+import QtQuick.LocalStorage 2.0 as Database
+import "./scripts/db.js" as DB
 
 MainView {
     id: root
@@ -47,7 +49,7 @@ MainView {
             text: i18n.tr('Dig Dogecoins. By hand.')
             width: parent.width*0.75
             onClicked: {
-                doge++;
+                DB.set('doge',++doge);
             }
         }
         Label {
@@ -56,5 +58,10 @@ MainView {
             anchors.horizontalCenter: parent.horizontalCenter
             text: doge + ' ' + i18n.tr('Dogecoin')
         }
+    }
+    Component.onCompleted: {
+        DB.get('doge', function (res) {
+            doge = Math.round(Number(res.rows.item(0).val))
+        })
     }
 }

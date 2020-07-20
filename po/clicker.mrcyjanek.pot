@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clicker.mrcyjanek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-19 13:49+0000\n"
+"POT-Creation-Date: 2020-07-20 10:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:39 clicker.desktop.in.h:1
+#: ../qml/Main.qml:41 clicker.desktop.in.h:1
 msgid "Clicker"
 msgstr ""
 
-#: ../qml/Main.qml:47
+#: ../qml/Main.qml:49
 msgid "Dig Dogecoins. By hand."
 msgstr ""
 
