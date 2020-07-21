@@ -33,7 +33,14 @@ function set(id, val) {
 }
 
 function get(id, callback) {
-    sql("SELECT val FROM keyval WHERE id = ?", [id], callback)
+    try {
+        function callbackEdited (res) {
+            callback(res.rows.item(0).val);
+        }
+        sql("SELECT val FROM keyval WHERE id = ?", [id], callbackEdited, function (x) {callback(0)})
+    } catch (e) {
+        callback(0);
+    }
 }
 
 // Create keyval table

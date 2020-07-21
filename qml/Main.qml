@@ -29,6 +29,7 @@ MainView {
     automaticOrientation: true
 
     property var doge: 0
+    property var item_cat: 0
 
     width: units.gu(45)
     height: units.gu(75)
@@ -58,10 +59,44 @@ MainView {
             anchors.horizontalCenter: parent.horizontalCenter
             text: doge + ' ' + i18n.tr('Dogecoin')
         }
+
+        Button {
+            id: catbuybtn
+            anchors.bottom: parent.bottom
+            color: UbuntuColors.orange
+            text: i18n.tr('Buy Cat [1 click/second] cost: 100 Dogecoin') + " | " + item_cat + " " + i18n.tr('Cats')
+            width: parent.width
+            onClicked: {
+                DB.get('doge', function (res) {
+                    if (res < 100) {
+                        console.log(i18n.tr("You can't but Cat! You don't have enough money"))
+                        return
+                    }
+                    DB.set('doge', doge-100)
+                    doge = doge-100;
+                    DB.set('item_cat', ++item_cat)
+                })
+            }
+        }
+
     }
     Component.onCompleted: {
         DB.get('doge', function (res) {
-            doge = Math.round(Number(res.rows.item(0).val))
+            doge = Math.round(Number(res))
         })
+        DB.get('item_cat', function (res) {
+            item_cat = Math.round(Number(res))
+        })
+
+        function Timer() {
+            return Qt.createQmlObject("import QtQuick 2.0; Timer {}", root);
+        }
+        var timer = new Timer();
+        timer.interval = 1000;
+        timer.repeat = true;
+        timer.triggered.connect(function () {
+            doge += item_cat*1
+        })
+        timer.start();
     }
 }
