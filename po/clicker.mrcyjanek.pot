@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clicker.mrcyjanek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 17:41+0000\n"
+"POT-Creation-Date: 2020-07-25 17:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,26 +17,38 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:42 clicker.desktop.in.h:1
+#: ../qml/pages/Home.qml:16 clicker.desktop.in.h:1
 msgid "Clicker"
 msgstr ""
 
-#: ../qml/Main.qml:50
+#: ../qml/pages/Home.qml:24
 msgid "Dig Dogecoins. By hand."
 msgstr ""
 
-#: ../qml/Main.qml:60
+#: ../qml/pages/Home.qml:34 ../qml/pages/Shop.qml:21
 msgid "Dogecoin"
 msgstr ""
 
-#: ../qml/Main.qml:67
+#: ../qml/pages/Home.qml:43
+msgid "Open Shop"
+msgstr ""
+
+#: ../qml/pages/Shop.qml:15
+msgid "Shop"
+msgstr ""
+
+#: ../qml/pages/Shop.qml:27
 msgid "Buy Cat [1 click/second] cost: 100 Dogecoin"
 msgstr ""
 
-#: ../qml/Main.qml:67
+#: ../qml/pages/Shop.qml:27
 msgid "Cats"
 msgstr ""
 
-#: ../qml/Main.qml:72
+#: ../qml/pages/Shop.qml:31
 msgid "You can't but Cat! You don't have enough money"
+msgstr ""
+
+#: ../qml/pages/Shop.qml:44
+msgid "Go Back"
 msgstr ""
